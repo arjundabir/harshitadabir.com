@@ -11,7 +11,7 @@ const page: FC<pageProps> = ({}) => {
       <Image src={MicroscopeCheck} alt="Harshita Dabir using a microscope" />
       <p>
         My name is Harshita Dabir, and I graduated from Cal Poly Pomona with a
-        Bachelor's degree in Mechanical Engineering and a minor in Business
+        Bachelor&quot;s degree in Mechanical Engineering and a minor in Business
         Operations Management. This combination has equipped me well for a
         fast-paced and dynamic industry and has allowed me to be versatile
         within industries. <br />

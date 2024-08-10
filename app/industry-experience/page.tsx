@@ -31,7 +31,7 @@ const page: FC<pageProps> = ({}) => {
         supported. Served as a primary point of contact for team members
         Demonstrated project management skills by overseeing costume design,
         prop procurement, and stage setup. Successfully led the team to a 2nd
-        place win for "Best Costumes" at a competition with 16 teams
+        place win for &quot;Best Costumes&quot; at a competition with 16 teams
       </p>
       <p>
         CPP Society of Women Engineers (SWE), Member Demonstrated commitment to
