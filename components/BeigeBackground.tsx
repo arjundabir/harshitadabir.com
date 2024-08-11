@@ -66,7 +66,7 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
         className={"w-full bg-beige -z-10"}
         style={{ height: `${height}px` }}
       >
-        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider uppercase">
+        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider capitalize">
           {currentPage.slice(1).replace("-", " ")}
         </h1>
       </div>
