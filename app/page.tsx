@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="container mx-auto pt-16 px-4">
       <BeigeBackground id="photo-headshot" />
-      <section className="flex flex-col items-center gap-2 p-4">
+      <section className="flex flex-col items-center gap-2 py-4">
         <div className="text-center space-y-1">
           <h1 className="text-5xl font-bold tracking-widest">
             Harshita <span className="font-normal">Dabir</span>
@@ -49,7 +49,7 @@ export default function Home() {
           Get To Know Me
         </h2>
         <p className="pb-2">Select any of the options below.</p>
-        <div className="md:flex justify-center gap-4 w-full flex-wrap">
+        <div className="md:flex justify-center gap-4 w-full max-w-4xl flex-wrap">
           {options.map((option, key) => (
             <Link
               key={key}
