@@ -6,11 +6,12 @@ interface FooterProps {}
 const Footer: FC<FooterProps> = ({}) => {
   return (
     <footer className="h-fit p-2">
-      <div className="flex flex-wrap justify-start gap-3">
-        <hr className="w-full" />
-        <br />
+      <div className="group flex flex-wrap justify-start gap-x-3 gap-y-1 pt-6 px-3">
+        <p className="w-full opacity-50 group-hover:opacity-100">
+          Contact Information:
+        </p>
         <a href="https://linkedin.com/in/harshita-dabir-182020">
-          <div className="transition-opacity duration-200 flex items-center space-x-1 py-3 opacity-50 hover:opacity-100">
+          <div className="transition-opacity duration-200 flex items-center space-x-1 pb-3 opacity-50 hover:opacity-100">
             <svg
               width="15"
               height="15"
@@ -28,7 +29,7 @@ const Footer: FC<FooterProps> = ({}) => {
             </svg>
           </div>
         </a>
-        <div className="transition-opacity duration-200 py-3 opacity-50 hover:opacity-100">
+        <div className="transition-opacity duration-200 pb-3 opacity-50 hover:opacity-100">
           <a href="mailto:hdabir2001@gmail.com">
             <MailIcon className="h-8 w-8" />
           </a>
