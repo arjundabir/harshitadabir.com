@@ -37,12 +37,12 @@ const page: FC<pageProps> = ({}) => {
             />
           </div>
         </div>
-        <div className="flex gap-4 p-4">
+        <div className="flex gap-4 p-4 justify-center">
           <div className="flex flex-col gap-4">
             <Image className="w-72" src={MPDF} alt="" />
-            <Image className="pl-24 w-96" src={MPDF2} alt="" />
+            <Image className="pl-24" src={MPDF2} alt="" />
           </div>
-          <div className="w-1/2 flex flex-col justify-center">
+          <div className="w-1/2 flex flex-col justify-center p-4">
             <h3 className="text-2xl font-bold">
               Meeting People/Developing Friendships
             </h3>
