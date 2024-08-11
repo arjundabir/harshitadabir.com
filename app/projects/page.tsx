@@ -43,7 +43,7 @@ const page: FC<pageProps> = ({}) => {
             </div>
             <ul className="list-disc px-8">
               {secondaryproject.actions.map((action, key) => (
-                <li>{action}</li>
+                <li key={key}>{action}</li>
               ))}
             </ul>
           </div>

@@ -4,7 +4,6 @@ import SD1 from "@/public/sd1.png";
 import SD2 from "@/public/sd2.png";
 import MPDF from "@/public/mpdf.png";
 import MPDF2 from "@/public/mpdf2.png";
-
 import Image from "next/image";
 
 interface pageProps {}
