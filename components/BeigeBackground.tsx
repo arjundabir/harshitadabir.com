@@ -1,6 +1,15 @@
 "use client";
+import {
+  FileCogIcon,
+  HandshakeIcon,
+  HouseIcon,
+  InfoIcon,
+  LightbulbIcon,
+  UniversityIcon,
+} from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { ReactNode, useEffect, useState } from "react";
+import Link from "next/link";
 
 interface BeigeBackgroundProps {
   id?: string;
@@ -47,8 +56,7 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
   }, [hydrate]);
 
   const currentPage = usePathname();
-  console.log(currentPage);
-
+  const title = currentPage.slice(1).replace("-", " ");
   return (
     hydrate &&
     (id ? (
@@ -63,15 +71,56 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
       />
     ) : (
       <div
-        className={"w-full bg-beige -z-10"}
+        className={
+          "w-full bg-beige z-10 flex flex-col justify-center items-center space-y-2"
+        }
         style={{ height: `${height}px` }}
       >
-        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider uppercase">
-          {currentPage.slice(1).replace("-", " ")}
+        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider capitalize">
+          {title}
         </h1>
+        <hr className="w-1/4g border-1 border-black" />
+        <div className="flex gap-2 items-center justify-center">
+          {options.map((option, key) => (
+            <Link
+              key={key}
+              href={"/" + option.title.toLowerCase().replace(" ", "-")}
+            >
+              {title.toLowerCase() === option.title.toLowerCase() ? (
+                <option.icon className="h-16 w-16 " />
+              ) : (
+                <option.icon className="h-10 w-10 opacity-50 hover:opacity-100" />
+              )}
+            </Link>
+          ))}
+        </div>
       </div>
     ))
   );
 };
 
 export default BeigeBackground;
+
+const options = [
+  { icon: HouseIcon, title: "" },
+  {
+    icon: InfoIcon,
+    title: "About Me",
+  },
+  {
+    icon: UniversityIcon,
+    title: "Campus Involvements",
+  },
+  {
+    icon: HandshakeIcon,
+    title: "Industry Experience",
+  },
+  {
+    icon: FileCogIcon,
+    title: "Projects",
+  },
+  {
+    icon: LightbulbIcon,
+    title: "Passions",
+  },
+];
