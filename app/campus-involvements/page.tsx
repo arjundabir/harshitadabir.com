@@ -13,11 +13,11 @@ const page: FC<pageProps> = ({}) => {
       <BeigeBackground />
       <div className="flex flex-wrap p-4 container mx-auto">
         <section className="w-full md:w-1/2">
-          <h2 className="text-3xl text-center">
+          <h2 className="text-2xl md:text-3xl md:text-center">
             Scholarships, <span className="text-lg">2021</span>
           </h2>
           {scholarships.map((scholarship, key) => (
-            <div key={key} className="p-4 flex gap-x-2">
+            <div key={key} className="py-4 flex gap-x-2">
               <Image
                 src={scholarship.icon}
                 alt="Edison Logo"
@@ -31,7 +31,7 @@ const page: FC<pageProps> = ({}) => {
           ))}
         </section>
         <section className="flex-1">
-          <h2 className="text-3xl text-center">
+          <h2 className="text-2xl md:text-3xl md:text-center">
             Clubs, <span className="text-lg">2020-2024</span>
           </h2>
           <div className="py-4">
@@ -41,7 +41,7 @@ const page: FC<pageProps> = ({}) => {
                 , Team Manager and Costume Head
               </span>
             </h5>
-            <ul className="list-disc px-8">
+            <ul className="list-disc px-4 md:px-8">
               <li>
                 Managed comprehensive team operations, including budget
                 allocation, practice scheduling, vendor relationship management,
@@ -67,7 +67,7 @@ const page: FC<pageProps> = ({}) => {
               CPP Society of Women Engineers (SWE),{" "}
               <span className="italic text-base font-normal"> Member</span>
             </h5>
-            <ul className="list-disc px-8">
+            <ul className="list-disc px-4 md:px-8">
               <li>
                 Demonstrated commitment to advancing women in engineering
                 through participation in conferences, mentorship programs, and
