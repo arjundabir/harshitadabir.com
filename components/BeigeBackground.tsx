@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React, { ReactNode, useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import Link from "next/link";
 
 interface BeigeBackgroundProps {
@@ -82,8 +81,11 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
         </h1>
         <hr className="w-1/4g border-1 border-black" />
         <div className="flex gap-2 items-center justify-center">
-          {options.map((option) => (
-            <Link href={"/" + option.title.toLowerCase().replace(" ", "-")}>
+          {options.map((option, key) => (
+            <Link
+              key={key}
+              href={"/" + option.title.toLowerCase().replace(" ", "-")}
+            >
               {title.toLowerCase() === option.title.toLowerCase() ? (
                 <option.icon className="h-16 w-16 " />
               ) : (
