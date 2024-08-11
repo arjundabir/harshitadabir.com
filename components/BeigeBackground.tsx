@@ -2,57 +2,60 @@
 import React, { useEffect, useState } from "react";
 
 interface BeigeBackgroundProps {
-  id: string;
-  from?: string;
+  id?: string;
 }
 
-const BeigeBackground = ({ id, from }: BeigeBackgroundProps) => {
-  const [height, setHeight] = useState(0);
-  const [topY, setTopY] = useState(0);
+const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
+  const [hydrate, setHydrate] = useState<boolean>(false);
+  const [height, setHeight] = useState(500); // Default height of 500
 
   useEffect(() => {
-    const calculateDimensions = () => {
-      const imgElement = document.getElementById(id);
-      const fromElement = from ? document.getElementById(from) : null;
+    if (id) {
+      const calculateDimensions = () => {
+        const imgElement = document.getElementById(id);
 
-      if (imgElement) {
-        // Use window.pageYOffset to get the current scroll position
-        const rect = imgElement.getBoundingClientRect();
-        const centerY = rect.top + rect.height / 2 + window.pageYOffset;
+        if (imgElement) {
+          const rect = imgElement.getBoundingClientRect();
+          const centerY = rect.top + rect.height / 2 + window.pageYOffset;
 
-        if (fromElement) {
-          const fromRect = fromElement.getBoundingClientRect();
-          setTopY(fromRect.top + window.pageYOffset);
-          setHeight(centerY - (fromRect.top + window.pageYOffset));
-        } else {
-          setTopY(0);
           setHeight(centerY);
+
+          localStorage.setItem("beigeBackgroundHeight", centerY.toString());
         }
+      };
+
+      calculateDimensions();
+
+      // Recalculate on window resize or scroll
+      window.addEventListener("resize", calculateDimensions);
+
+      return () => {
+        window.removeEventListener("resize", calculateDimensions);
+      };
+    } else {
+      const storedHeight = localStorage.getItem("beigeBackgroundHeight");
+
+      if (storedHeight) {
+        setHeight(parseInt(storedHeight, 10));
       }
-    };
+    }
+  }, [id]);
 
-    calculateDimensions(); // Initial calculation
-
-    // Recalculate on window resize or scroll
-    window.addEventListener("resize", calculateDimensions);
-    window.addEventListener("scroll", calculateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", calculateDimensions);
-      window.removeEventListener("scroll", calculateDimensions);
-    };
-  }, [id, from]);
-
+  useEffect(() => {
+    setHydrate(true);
+  }, [hydrate]);
   return (
-    <div
-      className={"w-full bg-beige -z-10"}
-      style={{
-        height: `${height}px`,
-        position: "absolute",
-        top: topY,
-        right: 0,
-      }}
-    />
+    hydrate && (
+      <div
+        className={"w-full bg-beige -z-10"}
+        style={{
+          height: `${height}px`,
+          position: "absolute",
+          top: 0,
+          right: 0,
+        }}
+      />
+    )
   );
 };
 
