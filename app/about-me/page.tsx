@@ -8,11 +8,7 @@ interface pageProps {}
 const page: FC<pageProps> = ({}) => {
   return (
     <div>
-      <BeigeBackground>
-        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider">
-          About Me
-        </h1>
-      </BeigeBackground>
+      <BeigeBackground />
       <div className="container mx-auto flex flex-wrap items-start justify-center gap-4 max-w-4xl p-4">
         <Image
           src={MicroscopeCheck}

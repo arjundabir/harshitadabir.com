@@ -1,14 +1,14 @@
 "use client";
+import { usePathname } from "next/navigation";
 import React, { ReactNode, useEffect, useState } from "react";
 
 interface BeigeBackgroundProps {
   id?: string;
-  children?: ReactNode;
 }
 
-const BeigeBackground = ({ id, children }: BeigeBackgroundProps) => {
+const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
   const [hydrate, setHydrate] = useState<boolean>(false);
-  const [height, setHeight] = useState(500); // Default height of 500
+  const [height, setHeight] = useState(500);
 
   useEffect(() => {
     if (id) {
@@ -45,6 +45,10 @@ const BeigeBackground = ({ id, children }: BeigeBackgroundProps) => {
   useEffect(() => {
     setHydrate(true);
   }, [hydrate]);
+
+  const currentPage = usePathname();
+  console.log(currentPage);
+
   return (
     hydrate &&
     (id ? (
@@ -62,7 +66,9 @@ const BeigeBackground = ({ id, children }: BeigeBackgroundProps) => {
         className={"w-full bg-beige -z-10"}
         style={{ height: `${height}px` }}
       >
-        {children}
+        <h1 className="text-4xl font-bold text-center pt-16 tracking-wider uppercase">
+          {currentPage.slice(1).replace("-", " ")}
+        </h1>
       </div>
     ))
   );
