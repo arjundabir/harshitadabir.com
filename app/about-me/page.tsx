@@ -1,13 +1,15 @@
 import { FC } from "react";
 import MicroscopeCheck from "@/public/microscope-check.png";
 import Image from "next/image";
+import BeigeBackground from "@/components/BeigeBackground";
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
     <main>
-      <h1>About Me</h1>
+      <BeigeBackground />
+      {/* <h1>About Me</h1>
       <Image src={MicroscopeCheck} alt="Harshita Dabir using a microscope" />
       <p>
         My name is Harshita Dabir, and I graduated from Cal Poly Pomona with a
@@ -25,7 +27,7 @@ const page: FC<pageProps> = ({}) => {
         company’s mission and ensures progress in the industry. I am seeking
         full-time opportunities to contribute my skills, driving growth and
         innovation.
-      </p>
+      </p> */}
     </main>
   );
 };
