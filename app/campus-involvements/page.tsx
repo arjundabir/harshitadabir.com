@@ -41,7 +41,7 @@ const page: FC<pageProps> = ({}) => {
                 , Team Manager and Costume Head
               </span>
             </h5>
-            <ul className="list-disc">
+            <ul className="list-disc px-8">
               <li>
                 Managed comprehensive team operations, including budget
                 allocation, practice scheduling, vendor relationship management,
@@ -67,7 +67,7 @@ const page: FC<pageProps> = ({}) => {
               CPP Society of Women Engineers (SWE),{" "}
               <span className="italic text-base font-normal"> Member</span>
             </h5>
-            <ul className="list-disc">
+            <ul className="list-disc px-8">
               <li>
                 Demonstrated commitment to advancing women in engineering
                 through participation in conferences, mentorship programs, and
