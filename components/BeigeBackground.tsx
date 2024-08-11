@@ -1,11 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 
 interface BeigeBackgroundProps {
   id?: string;
+  children?: ReactNode;
 }
 
-const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
+const BeigeBackground = ({ id, children }: BeigeBackgroundProps) => {
   const [hydrate, setHydrate] = useState<boolean>(false);
   const [height, setHeight] = useState(500); // Default height of 500
 
@@ -45,7 +46,8 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
     setHydrate(true);
   }, [hydrate]);
   return (
-    hydrate && (
+    hydrate &&
+    (id ? (
       <div
         className={"w-full bg-beige -z-10"}
         style={{
@@ -55,7 +57,14 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
           right: 0,
         }}
       />
-    )
+    ) : (
+      <div
+        className={"w-full bg-beige -z-10"}
+        style={{ height: `${height}px` }}
+      >
+        {children}
+      </div>
+    ))
   );
 };
 
