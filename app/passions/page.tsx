@@ -28,12 +28,12 @@ const page: FC<pageProps> = ({}) => {
             <Image
               className="w-full md:w-48 h-auto rounded"
               src={SD1}
-              alt="A picture with my friends."
+              alt="4 Edwards Interns"
             />
             <Image
               className="w-full md:w-48 h-auto rounded"
               src={SD2}
-              alt="A picture with my friends."
+              alt="Dance picture"
             />
           </div>
         </div>

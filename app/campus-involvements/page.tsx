@@ -20,7 +20,7 @@ const page: FC<pageProps> = ({}) => {
             <div key={key} className="py-4 flex gap-x-2">
               <Image
                 src={scholarship.icon}
-                alt="Edison Logo"
+                alt={"Company Icons"}
                 className="aspect-square w-8 h-8 rounded border mt-1"
               />
               <div>

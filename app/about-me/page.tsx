@@ -12,7 +12,7 @@ const page: FC<pageProps> = ({}) => {
       <div className="container mx-auto flex flex-wrap items-start md:justify-center gap-4 max-w-4xl p-4">
         <Image
           src={MicroscopeCheck}
-          alt="Harshita Dabir using a microscope"
+          alt="Microscope Checks"
           className="md:w-80 w-full rounded-[2.5%]"
         />
         <div className="w-full md:flex-1">

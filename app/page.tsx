@@ -29,7 +29,7 @@ export default function Home() {
           src={HarshitaHeadshot}
           width={400}
           className="rounded-[50%] w-40"
-          alt="Headshot photo of Harshita Dabir in her California Polytechnic University, Pomona Graduation Attire."
+          alt="Headshot"
         />
         <p className="max-w-4xl leading-relaxed lg:text-center m-1 p-1">
           Welcome to my online portfolio! Here, you will get a deeper insight
