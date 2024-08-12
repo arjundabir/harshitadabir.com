@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Harshita Dabir's Digital Portfolio",
-  description: "Get a deeper insight into my projects and passions.",
+  description:
+    "Welcome to my online portfolio! Here, you will get a deeper insight into who I am, my various involvements, and my interests. Explore, engage, and get to know the person behind these acheivements.",
   icons: { icon: "/apple.png", apple: "/apple.png" },
 };
 
