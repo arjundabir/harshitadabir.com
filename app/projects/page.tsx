@@ -49,9 +49,11 @@ const page: FC<pageProps> = ({}) => {
             </ul>
           </div>
           <a href="https://drive.google.com/drive/folders/1MjKkAvMz2dKdMXH3pbtWjnNl_bJ6OBwB?usp=sharing">
-            <div className="transition-all duration-200 h-10 w-full bg-beige flex items-center justify-center rounded text-2xl font-bold drop-shadow-md shadow hover:shadow-none gap-1 hover:bg-[#d9cbc1]/90">
-              <p>Favorite University Labs/Papers</p>
-              <ExternalLinkIcon />
+            <div className="p-2">
+              <div className="transition-all duration-200 h-10 w-full bg-beige flex items-center justify-center rounded text-md md:text-xl font-bold drop-shadow-md shadow hover:shadow-none gap-1 hover:bg-[#d9cbc1]/90">
+                <p>Favorite University Labs/Papers</p>
+                <ExternalLinkIcon />
+              </div>
             </div>
           </a>
         </section>
