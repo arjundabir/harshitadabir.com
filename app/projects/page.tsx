@@ -13,15 +13,26 @@ const page: FC<pageProps> = ({}) => {
           {projects.map((project, key) => (
             <div key={key} className="p-4">
               <div className="flex justify-between">
-                <a href={project.link} target="_blank">
-                  <h5 className="text-xl font-bold hover:underline">
+                {project.link ? (
+                  <a href={project.link} target="_blank">
+                    <h5 className="text-xl font-bold underline hover:text-black/50">
+                      {project.title},
+                      <span className="italic text-base font-normal">
+                        {" "}
+                        {project.position}
+                      </span>
+                    </h5>
+                  </a>
+                ) : (
+                  <h5 className="text-xl font-bold">
                     {project.title},
                     <span className="italic text-base font-normal">
                       {" "}
                       {project.position}
                     </span>
                   </h5>
-                </a>
+                )}
+
                 <p className="font-bold">{project.duration}</p>
               </div>
               <ul className="list-disc pl-4 md:px-8">
@@ -36,7 +47,7 @@ const page: FC<pageProps> = ({}) => {
           <div className="p-4">
             <div className="flex justify-between">
               <a href={secondaryproject.link} target="_blank">
-                <h5 className="text-xl font-bold hover:underline">
+                <h5 className="text-xl font-bold underline hover:text-black/50">
                   {secondaryproject.title},
                   <span className="italic text-base font-normal">
                     {" "}
@@ -71,7 +82,6 @@ export default page;
 const projects = [
   {
     title: "Private Tennis Coach",
-    link: "https://drive.google.com/drive/folders/1sOTU6-glNQ3Cr3QjE9gr1pgERHEMtU3g?usp=drive_link",
     position: "Entrepreneur",
     duration: "’17-’22",
     actions: [

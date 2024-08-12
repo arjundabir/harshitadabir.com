@@ -9,9 +9,9 @@ interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <div className="flex flex-wrap w-screen">
+    <div className="flex flex-wrap w-screen ">
       <BeigeBackground />
-      <div className="flex flex-wrap p-4 container mx-auto">
+      <div className="flex flex-wrap p-4 container mx-auto gap-x-8">
         <section className="w-full md:w-1/2">
           <h2 className="text-2xl md:text-3xl md:text-center">
             Scholarships, <span className="text-lg">2021</span>
@@ -46,19 +46,21 @@ const page: FC<pageProps> = ({}) => {
                 Managed comprehensive team operations, including budget
                 allocation, practice scheduling, vendor relationship management,
                 and travel logistics to optimize team performance and achieve
-                competition goals.
+                competition goals
               </li>
               <li>
                 Cultivated a diverse and inclusive team environment by fostering
                 open communication, addressing conflicts promptly, and ensuring
                 all members felt valued and supported. Served as a primary point
-                of contact for team members.
+                of contact for team members
               </li>
               <li>
                 Demonstrated project management skills by overseeing costume
-                design, prop procurement, and stage setup. Successfully led the
-                team to a 2nd place win for &quot;Best Costumes&quot; at a
-                competition with 16 teams.
+                design, prop procurement, and stage setup
+              </li>
+              <li>
+                Successfully led the team to a 2nd place win for &quot;Best
+                Costumes&quot; at a competition with 16 teams
               </li>
             </ul>
           </div>
@@ -71,11 +73,11 @@ const page: FC<pageProps> = ({}) => {
               <li>
                 Demonstrated commitment to advancing women in engineering
                 through participation in conferences, mentorship programs, and
-                networking events.
+                networking events
               </li>
               <li>
                 Developed relationships with industry professionals and fellow
-                engineering students through SWE involvement.
+                engineering students through SWE involvement
               </li>
               <li>
                 Created the foundation for the CPP SWE website using Python in
@@ -93,20 +95,20 @@ const scholarships = [
     title: "Edison STEM Scholarship",
     icon: Edison,
     description:
-      "Awards students to help fuel our passion for making a difference by studying science, technology, engineering, and math.",
+      "Awards students to help fuel our passion for making a difference by studying science, technology, engineering, and math",
   },
   {
     title: "Lockheed Martin Recipient",
     icon: Lockheed,
     description:
-      "Based on academic performance, demonstrate leadership, participate in community activities, educational goals and objectives, and outside appraisal.",
+      "Based on academic performance, demonstrate leadership, participate in community activities, educational goals and objectives, and outside appraisal",
   },
   {
     title: "SWE-LA Recipient",
 
     icon: SWE,
     description:
-      "Motivate women to reach their full potential as leaders and engineers, and to demonstrate the value of diversity.",
+      "Motivate women to reach their full potential as leaders and engineers, and to demonstrate the value of diversity",
   },
 ];
 

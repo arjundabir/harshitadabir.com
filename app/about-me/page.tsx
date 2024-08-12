@@ -18,7 +18,7 @@ const page: FC<pageProps> = ({}) => {
         <div className="w-full md:flex-1">
           <p>
             My name is Harshita Dabir, and I graduated from Cal Poly Pomona with
-            a Bachelor&quot;s degree in Mechanical Engineering and a minor in
+            a Bachelor&#39;s degree in Mechanical Engineering and a minor in
             Business Operations Management. This combination has equipped me
             well for a fast-paced and dynamic industry and has allowed me to be
             versatile within industries. <br />
@@ -29,7 +29,7 @@ const page: FC<pageProps> = ({}) => {
             have equipped me to create data-driven strategies to ensure growth
             and success in projects and team environments. <br />
             <br />I aim to devise and implement strategies that align with the
-            company’s mission and ensures progress in the industry. I am seeking
+            company’s mission and ensure progress in the industry. I am seeking
             full-time opportunities to contribute my skills, driving growth and
             innovation.
           </p>
