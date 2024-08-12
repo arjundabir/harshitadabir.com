@@ -21,7 +21,7 @@ const page: FC<pageProps> = ({}) => {
                 </h5>
                 <p className="font-bold">{project.duration}</p>
               </div>
-              <ul className="list-disc px-8">
+              <ul className="list-disc pl-4 md:px-8">
                 {project.actions.map((action, key) => (
                   <li key={key}>{action}</li>
                 ))}
@@ -41,7 +41,7 @@ const page: FC<pageProps> = ({}) => {
               </h5>
               <p className="font-bold">{secondaryproject.duration}</p>
             </div>
-            <ul className="list-disc px-8">
+            <ul className="list-disc pl-4 md:px-8">
               {secondaryproject.actions.map((action, key) => (
                 <li key={key}>{action}</li>
               ))}

@@ -12,8 +12,8 @@ const page: FC<pageProps> = ({}) => {
           <div key={key} className="p-4">
             <h3 className="text-base">{experience.type}</h3>
             <hr className="w-full border-1 border-black" />
-            <div className="flex justify-between">
-              <h5 className="text-xl font-bold">
+            <div className="flex flex-wrap md:justify-between">
+              <h5 className=" text-xl font-bold">
                 {experience.job},
                 <span className="italic text-base font-normal">
                   {" "}
@@ -22,7 +22,7 @@ const page: FC<pageProps> = ({}) => {
               </h5>
               <p className="font-bold">{experience.duration}</p>
             </div>
-            <ul className="list-disc px-8">
+            <ul className="list-disc pl-4 md:px-8">
               {experience.actions.map((action, key) => (
                 <li key={key}>{action}</li>
               ))}

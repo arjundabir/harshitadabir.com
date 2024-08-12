@@ -13,8 +13,8 @@ const page: FC<pageProps> = ({}) => {
     <div>
       <BeigeBackground />
       <section className="container mx-auto w-full">
-        <div className="p-4 flex justify-center">
-          <div className="w-1/2 flex flex-col justify-between p-4">
+        <div className="p-4 flex flex-wrap md:justify-center gap-4">
+          <div className="w-full md:w-1/2 flex flex-col justify-center gap-4">
             <h3 className="text-2xl font-bold">Self-Development</h3>
             <p>
               Throughout my career, I have cultivated a diverse range of
@@ -24,25 +24,29 @@ const page: FC<pageProps> = ({}) => {
               thrive in dynamic environments and deliver results.
             </p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Image
-              className="w-48 h-auto"
+              className="w-full md:w-48 h-auto rounded"
               src={SD1}
               alt="A picture with my friends."
             />
             <Image
-              className="w-48 h-auto"
+              className="w-full md:w-48 h-auto rounded"
               src={SD2}
               alt="A picture with my friends."
             />
           </div>
         </div>
-        <div className="flex gap-4 p-4 justify-center">
-          <div className="flex flex-col gap-4">
-            <Image className="w-72" src={MPDF} alt="" />
-            <Image className="pl-24" src={MPDF2} alt="" />
+        <div className="flex flex-wrap-reverse p-4 gap-4">
+          <div className="flex flex-col gap-4 flex-1 items-end">
+            <Image
+              className="w-full md:w-72 self-start rounded"
+              src={MPDF}
+              alt=""
+            />
+            <Image className="rounded" src={MPDF2} alt="" />
           </div>
-          <div className="w-1/2 flex flex-col justify-center p-4">
+          <div className="w-full md:w-1/2 flex flex-col justify-center">
             <h3 className="text-2xl font-bold">
               Meeting People/Developing Friendships
             </h3>

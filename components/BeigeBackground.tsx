@@ -87,9 +87,9 @@ const BeigeBackground = ({ id }: BeigeBackgroundProps) => {
               href={"/" + option.title.toLowerCase().replace(" ", "-")}
             >
               {title.toLowerCase() === option.title.toLowerCase() ? (
-                <option.icon className="h-16 w-16 " />
+                <option.icon className="h-10 w-10 md:h-16 md:w-16 " />
               ) : (
-                <option.icon className="h-10 w-10 opacity-50 hover:opacity-100" />
+                <option.icon className="h-8 w-8 md:h-10 md:w-10 opacity-50 hover:opacity-100" />
               )}
             </Link>
           ))}

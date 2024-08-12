@@ -9,11 +9,11 @@ const page: FC<pageProps> = ({}) => {
   return (
     <div>
       <BeigeBackground />
-      <div className="container mx-auto flex flex-wrap items-start justify-center gap-4 max-w-4xl p-4">
+      <div className="container mx-auto flex flex-wrap items-start md:justify-center gap-4 max-w-4xl p-4">
         <Image
           src={MicroscopeCheck}
           alt="Harshita Dabir using a microscope"
-          className="md:w-80 w-1/2  rounded-[1%]"
+          className="md:w-80 w-full rounded-[2.5%]"
         />
         <div className="w-full md:flex-1">
           <p>
