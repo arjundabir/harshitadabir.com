@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Harshita Dabir's Digital Portfolio",
   description: "Get a deeper insight into my projects and passions.",
+  icons: { icon: "/apple.png", apple: "/apple.png" },
 };
 
 export default function RootLayout({
