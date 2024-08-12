@@ -13,13 +13,15 @@ const page: FC<pageProps> = ({}) => {
             <h3 className="text-base">{experience.type}</h3>
             <hr className="w-full border-1 border-black" />
             <div className="flex flex-wrap md:justify-between">
-              <h5 className=" text-xl font-bold">
-                {experience.job},
-                <span className="italic text-base font-normal">
-                  {" "}
-                  {experience.position}
-                </span>
-              </h5>
+              <a href={experience.link} target="_blank">
+                <h5 className=" text-xl font-bold hover:underline">
+                  {experience.job},
+                  <span className="italic text-base font-normal">
+                    {" "}
+                    {experience.position}
+                  </span>
+                </h5>
+              </a>
               <p className="font-bold">{experience.duration}</p>
             </div>
             <ul className="list-disc pl-4 md:px-8">
@@ -41,6 +43,7 @@ const experiences = [
     type: "ONE-YEAR CONTRACT:",
     job: "CPP Marketing Department & Public Relations",
     position: "Project and Operations Supervisor",
+    link: "https://drive.google.com/drive/folders/1SOW5r3fjN1245KR_47k3S4BiVK1Gp0ro?usp=drive_link",
     duration: "August 2023 - August 2024",
     actions: [
       "Led digital project initiatives aimed at optimizing user experience, achieving a 30% improvement in project delivery timelines through the use of Monday.com for task management and coordination.",
@@ -53,6 +56,7 @@ const experiences = [
     type: "SIX-MONTH CO-OP:",
     job: "Edwards Lifesciences",
     position: "Research and Development Engineering Co-Op",
+    link: "https://drive.google.com/drive/folders/1S3wIAkFqPicwnUxxbgCJiHr0QbGLKZoV?usp=drive_link",
     duration: "June 2022 - December 2022",
     actions: [
       "Assisted in an investigation process for an electrical test system on Advanced-Aged Disposable Pressure Transducers (DPT) and collaborated in submitting documents to the FDA.",
@@ -67,6 +71,7 @@ const experiences = [
     job: "NASA L’Space Mission Concept Academy",
     position: "Deputy Project Manager",
     duration: "June 2021 - August 2021",
+    link: "https://drive.google.com/drive/folders/1SpEEZLBZY1PTYcD6TpLPKeQ5FAvfVv2U?usp=drive_linkgt",
     actions: [
       "Designed a low-orbit satellite to Mars with a shallow ground-penetrating system and a lunar rover descent that adjusted to -238° F.",
       "Directed three cross-functional teams on the development and testing of the project, focusing on robust validation processes and innovative design to meet stringent project specifications.",

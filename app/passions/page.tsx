@@ -42,9 +42,9 @@ const page: FC<pageProps> = ({}) => {
             <Image
               className="w-full md:w-72 self-start rounded"
               src={MPDF}
-              alt=""
+              alt="Lots of Edwards Interns"
             />
-            <Image className="rounded" src={MPDF2} alt="" />
+            <Image className="rounded" src={MPDF2} alt="Inside Rigel Meeting" />
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-center">
             <h3 className="text-2xl font-bold">

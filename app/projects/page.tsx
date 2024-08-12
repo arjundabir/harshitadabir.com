@@ -13,13 +13,15 @@ const page: FC<pageProps> = ({}) => {
           {projects.map((project, key) => (
             <div key={key} className="p-4">
               <div className="flex justify-between">
-                <h5 className="text-xl font-bold">
-                  {project.title},
-                  <span className="italic text-base font-normal">
-                    {" "}
-                    {project.position}
-                  </span>
-                </h5>
+                <a href={project.link} target="_blank">
+                  <h5 className="text-xl font-bold hover:underline">
+                    {project.title},
+                    <span className="italic text-base font-normal">
+                      {" "}
+                      {project.position}
+                    </span>
+                  </h5>
+                </a>
                 <p className="font-bold">{project.duration}</p>
               </div>
               <ul className="list-disc pl-4 md:px-8">
@@ -33,13 +35,15 @@ const page: FC<pageProps> = ({}) => {
         <section className="flex-1">
           <div className="p-4">
             <div className="flex justify-between">
-              <h5 className="text-xl font-bold">
-                {secondaryproject.title},
-                <span className="italic text-base font-normal">
-                  {" "}
-                  {secondaryproject.position}
-                </span>
-              </h5>
+              <a href={secondaryproject.link} target="_blank">
+                <h5 className="text-xl font-bold hover:underline">
+                  {secondaryproject.title},
+                  <span className="italic text-base font-normal">
+                    {" "}
+                    {secondaryproject.position}
+                  </span>
+                </h5>
+              </a>
               <p className="font-bold">{secondaryproject.duration}</p>
             </div>
             <ul className="list-disc pl-4 md:px-8">
@@ -48,7 +52,7 @@ const page: FC<pageProps> = ({}) => {
               ))}
             </ul>
           </div>
-          <a href="https://drive.google.com/drive/folders/1MjKkAvMz2dKdMXH3pbtWjnNl_bJ6OBwB?usp=sharing">
+          <a href="https://drive.google.com/drive/folders/1PdAWpdw2IM_kPPy6s5MXmrR4zuiEVFkc?usp=drive_link">
             <div className="p-2">
               <div className="transition-all duration-200 h-10 w-full bg-beige flex items-center justify-center rounded text-md md:text-xl font-bold drop-shadow-md shadow hover:shadow-none gap-1 hover:bg-[#d9cbc1]/90">
                 <p>Favorite University Labs/Papers</p>
@@ -67,6 +71,7 @@ export default page;
 const projects = [
   {
     title: "Private Tennis Coach",
+    link: "https://drive.google.com/drive/folders/1sOTU6-glNQ3Cr3QjE9gr1pgERHEMtU3g?usp=drive_link",
     position: "Entrepreneur",
     duration: "’17-’22",
     actions: [
@@ -76,6 +81,7 @@ const projects = [
   },
   {
     title: "CubeSat",
+    link: "https://drive.google.com/drive/folders/1zhWrRZrLvIuFI7zKF-QiiLAervKtCIQS?usp=drive_link",
     position: "Systems Tool Kit Leader",
     duration: "’18-’20",
     actions: [
@@ -86,6 +92,7 @@ const projects = [
   },
   {
     title: "MIT-Lemelson",
+    link: "https://drive.google.com/drive/folders/19xSVcGGV-YMVoRuEqugsxGwaEX4XALvM?usp=drive_link",
     position: "Communications Lead",
     duration: "‘18-’19",
     actions: [
@@ -98,6 +105,7 @@ const projects = [
 
 const secondaryproject = {
   title: "Senior Project",
+  link: "https://drive.google.com/drive/folders/1WJrPln22XSCrBrWXXmiLsjSUB6y6zgJX?usp=drive_link",
   position: "Aerodynamics Lead",
   duration: "‘23-’24",
   actions: [
