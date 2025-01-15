@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   description:
     "Welcome to my online portfolio! Here, you will get a deeper insight into who I am, my various involvements, and my interests. Explore, engage, and get to know the person behind these acheivements.",
   icons: { icon: "/apple.png", apple: "/apple.png" },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
